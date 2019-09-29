@@ -1,11 +1,13 @@
 'no imports!'
 'no list comprehensions!'
 'no lambdas!'
+'no inbuild functions!'
+'except loops, conditions, return, raise'
 
 
 def get_max_common_element(first_list, second_list):
     """
-    Select common elements from both lists and return one with the max value.
+    Select common element from both lists and return one with the max value.
 
     :raises ValueError: if any of the input lists are empty.
     Error message: 'Input lists cannot be empty'
@@ -13,7 +15,23 @@ def get_max_common_element(first_list, second_list):
     :raises ValueError: if there are no common elemens.
     Error message: 'There are no common elements'
     """
-    pass
+    if not first_list or not second_list:
+        raise ValueError('Input lists cannot be empty')
+
+    result = []
+    for elelemt in first_list:
+        if elelemt in second_list:
+            result.append(elelemt)
+    
+    max_num = result[0]
+    for item in result:
+        if item > max_num:
+            max_num = item
+    
+    if not result:
+        raise ValueError('There are no common elements')
+    
+    return max_num
 
 
 def get_odd_elements(x, start):
