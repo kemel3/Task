@@ -38,7 +38,12 @@ def get_odd_elements(x, start):
     """
     Return a list containing first 'x' odd elements starting from 'start'
     """
-    pass
+    result = []
+    while len(result) is not x:
+        if start % 2 != 0:
+            result.append(start)
+        start += 1
+    return result
 
 
 def get_even_numbers(x, stop, z):
