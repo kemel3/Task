@@ -82,7 +82,11 @@ def get_average_of_elements(first_list, second_list):
     Returns a single integer, which is an average from elements that are on 
     'first_list' but not on 'second_list'
     """
-    pass
+    count = 0
+    for x in first_list:
+        if first_list is not second_list:
+            count += x
+    return count // len(first_list)
 
 
 'BONUS'
