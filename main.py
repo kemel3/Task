@@ -2,7 +2,7 @@
 'no list comprehensions!'
 'no lambdas!'
 'no inbuild functions!'
-'except loops, conditions, return, raise'
+'except loops, conditions, return, raise, len'
 
 
 def get_max_common_element(first_list, second_list):
@@ -51,7 +51,11 @@ def get_even_numbers(x, stop, z):
     Returns a list containing first 'x' even elements lower than 'stop'.
     That elements must be divisible by 'z'. 
     """
-    pass
+    result = []
+    for element in range(x, stop):
+        if element % 2 and element % z:
+            result.append(element)
+    return result
 
 
 def get_sum_of_greatest_elements(my_list, x):
