@@ -51,9 +51,11 @@ def get_even_numbers(x, stop, z):
     That elements must be divisible by 'z'.
     """
     result = []
-    for element in range(x, stop):
-        if element % 2 == 0 and element / z:
-            result.append(element)
+    counter = 0
+    while len(result) is not x:
+        if counter % 2 == 0 and counter < stop and counter // z:
+            result.append(counter)
+        counter += 1
     return result
 
 
