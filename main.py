@@ -2,7 +2,7 @@
 'no list comprehensions!'
 'no lambdas!'
 'no inbuild functions!'
-'except loops, conditions, return, raise, len'
+'except loops, conditions, return, raise, len, range'
 
 
 def get_max_common_element(first_list, second_list):
@@ -52,7 +52,7 @@ def get_even_numbers(x, stop, z):
     """
     result = []
     for element in range(x, stop):
-        if element % 2 and element % z:
+        if element % 2 == 0 and element / z:
             result.append(element)
     return result
 
@@ -107,12 +107,13 @@ def return_prime_numbers_less_tahn_100():
 
 def main():
     # TODO first_list, second_list, x, stop, z
-    get_max_common_element(first_list, second_list)
-    get_odd_elements(x, start)
-    get_even_numbers(x, stop, z)
-    get_sum_of_greatest_elements(my_list, x)
-    get_average_of_elements(first_list, second_list)
-    return_prime_numbers_less_tahn_100()
+
+    # get_max_common_element(first_list, second_list)
+    # get_odd_elements(x, start)
+    # get_even_numbers(x, stop, z)
+    # get_sum_of_greatest_elements(my_list, x)
+    # get_average_of_elements(first_list, second_list)
+    print(return_prime_numbers_less_tahn_100())
 
 
 if __name__ == "__main__":
