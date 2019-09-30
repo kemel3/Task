@@ -30,7 +30,6 @@ def get_max_common_element(first_list, second_list):
     
     if not result:
         raise ValueError('There are no common elements')
-    
     return max_num
 
 
@@ -49,7 +48,7 @@ def get_odd_elements(x, start):
 def get_even_numbers(x, stop, z):
     """
     Returns a list containing first 'x' even elements lower than 'stop'.
-    That elements must be divisible by 'z'. 
+    That elements must be divisible by 'z'.
     """
     result = []
     for element in range(x, stop):
@@ -63,7 +62,19 @@ def get_sum_of_greatest_elements(my_list, x):
     Returns a single integer, which is a sum of 'x' biggest elements from 'my_list'
     i.e. Returns a sum of 3 biggest elements from [2, 18, 5, -11, 7, 6, 9]
     """
-    pass
+    result = []
+    for i in range(0, x):
+        max1 = 0
+        for j in range(len(my_list)):
+            if my_list[j] > max1:
+                max1 = my_list[j]
+        my_list.remove(max1)
+        result.append(max1)
+
+    count = 0
+    for x in result:
+        count += x
+    return count
 
 
 def get_average_of_elements(first_list, second_list):
@@ -84,3 +95,7 @@ def return_prime_numbers_less_tahn_100():
 
 def main():
     pass
+
+
+if __name__ == "__main__":
+    main()
