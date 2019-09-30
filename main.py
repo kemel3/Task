@@ -84,7 +84,7 @@ def get_average_of_elements(first_list, second_list):
     """
     count = 0
     for x in first_list:
-        if first_list is not second_list:
+        if first_list not in second_list:
             count += x
     return count // len(first_list)
 
