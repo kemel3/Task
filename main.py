@@ -106,7 +106,13 @@ def return_prime_numbers_less_tahn_100():
 
 
 def main():
-    pass
+    # TODO first_list, second_list, x, stop, z
+    get_max_common_element(first_list, second_list)
+    get_odd_elements(x, start)
+    get_even_numbers(x, stop, z)
+    get_sum_of_greatest_elements(my_list, x)
+    get_average_of_elements(first_list, second_list)
+    return_prime_numbers_less_tahn_100()
 
 
 if __name__ == "__main__":
