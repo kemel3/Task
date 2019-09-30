@@ -94,7 +94,15 @@ def return_prime_numbers_less_tahn_100():
     """
     Returns a list containing prime numbers that are less than 100
     """
-    pass
+    primes = []
+    for num in range(100):
+        is_prime = True
+        for i in range(2, num):
+            if num % i == 0:
+                is_prime = False 
+        if is_prime:
+            primes.append(num)
+    return primes
 
 
 def main():
